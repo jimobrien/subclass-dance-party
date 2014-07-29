@@ -21,14 +21,31 @@ $(document).ready(function(){
     // var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
+    var top = Math.random() * (500 - 350)  + 350;
+    var left = Math.random() * 1000;
 
     var dancer = new BlinkyDancer(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      top,
+       left,
+      Math.random() * window.innerWidth
     );
+
+    dancers.push(dancer)
     
     $('body').append(dancer.$node);
   });
+
+  $(".alignDancersButton").on("click", function(event) {
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].setPosition(500,500);
+    }
+  });
+
+$(".dancer").mouseover(function() {
+    var id = $(this).data('id');
+    console.log('asd',id);
+    $(id).fadeIn();
+  });
+  
 });
 

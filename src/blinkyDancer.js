@@ -11,6 +11,3 @@ BlinkyDancer.prototype.step = function() {
   this.oldStep();
   this.$node.toggle();
 };
-
-
-// BlinkyDancer.step => BlinkyDancer.prototype.step => Dance.prototype.step

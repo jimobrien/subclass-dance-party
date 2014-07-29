@@ -41,11 +41,7 @@ $(document).ready(function(){
     }
   });
 
-$(".dancer").mouseover(function() {
-    var id = $(this).data('id');
-    console.log('asd',id);
-    $(id).fadeIn();
-  });
+
   
 });
 
